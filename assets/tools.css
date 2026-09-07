@@ -1,0 +1,61 @@
+/* ============================================================
+   沪上三公 · 十年上岸规划 — 第二版新增组件样式
+   （落地实操模板、可打印工具卡、紧凑表格等）
+   ============================================================ */
+
+/* 紧凑小表（资源/节奏模板内使用） */
+.tbl-sm{font-size:.84rem;margin:8px 0}
+.tbl-sm td,.tbl-sm th{padding:6px 8px}
+
+/* code 片段 */
+code{background:#eef2ff;border:1px solid #dbe3ff;border-radius:6px;padding:1px 6px;font-size:.85em;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+
+/* 工具卡片网格（打印工具包） */
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:20px 0 8px}
+.tool-card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);color:var(--ink);transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease;text-decoration:none}
+.tool-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px -14px rgba(15,23,42,.3);border-color:var(--accent);text-decoration:none}
+.tool-card b{font-size:1.5rem;display:block;margin-bottom:6px}
+.tool-card h4{font-size:1rem;margin-bottom:6px;color:var(--ink)}
+.tool-card p{font-size:.85rem;color:var(--ink-2);margin:0;line-height:1.6}
+
+/* 资源中心按钮化链接 */
+.res-pill{display:inline-block;background:#eef2ff;color:var(--accent-2);border:1px solid #dbe3ff;border-radius:999px;padding:2px 12px;font-size:.8rem;font-weight:600}
+
+/* 阶段/节奏小标签 */
+.tempo{display:grid;gap:10px}
+.tempo-row{display:flex;gap:12px;align-items:baseline}
+.tempo-row b{min-width:64px;flex:none;color:var(--accent-2)}
+
+/* 移动端适配工具卡 */
+@media (max-width:560px){
+  .tool-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .tool-card{padding:12px 14px}
+  .tool-card b{font-size:1.2rem}
+}
+
+/* 打印：工具卡不分页、可点链接保留 */
+@media print{
+  .tool-card{box-shadow:none;break-inside:avoid}
+}
+
+/* ---------- 多页版：顶栏“标签页”与页面标题条 ---------- */
+.nav-links a.active{background:var(--accent);color:#fff}
+.nav-links a.active:hover{background:var(--accent-2);color:#fff}
+
+.band{
+  background:linear-gradient(120deg,#1e3a8a 0%,#1d4ed8 60%,#2563eb 100%);
+  color:#fff;padding:34px 20px 28px;
+}
+.band .band-kicker{font-size:.85rem;opacity:.9;margin-bottom:8px}
+.band .band-kicker a{color:#bfdbfe;font-weight:600}
+.band h1{font-size:clamp(1.35rem,3.2vw,2rem);margin-bottom:8px}
+.band-desc{max-width:860px;opacity:.92;font-size:.98rem;margin:0}
+
+@media (max-width:900px){
+  .nav-links a{padding:6px 8px;font-size:.85rem}
+}
+
+@media print{
+  .band{display:none !important}
+  .nav-links a.active{background:#e5e7eb;color:#000}
+}

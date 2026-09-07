@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>报名流程 · 沪上三公上岸规划</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/tools.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">🎯 沪上三公上岸规划</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首页</a>
+      <a href="roadmap.html">十年路线</a>
+      <a href="action.html">落地实操</a>
+      <a href="schools.html">三校档案</a>
+      <a href="process.html" class="active">报名流程</a>
+      <a href="profile.html">上岸配置</a>
+      <a href="resources.html">学习资源</a>
+      <a href="tools.html">打印工具</a>
+      <a href="faq.html">FAQ</a>
+      <a href="planb.html">Plan B</a>
+      <a href="sources.html">来源</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<section class="band">
+  <div class="section-inner">
+    <p class="band-kicker"><a href="index.html">🏠 首页</a> ／ 06 · 每年4月的“战斗节奏”</p>
+    <h1>06 · 每年4月的“战斗节奏”</h1>
+    <p class="band-desc">简章发布 → 报名 → 初审 → 评估 → 放榜，附三校名额对照表。</p>
+  </div>
+</section>
+
+<section class="calc section" aria-label="入学年份推算">
+  <div class="section-inner calc-grid">
+    <div class="calc-control">
+      <h3>📅 孩子生日不同，时间线整体平移</h3>
+      <p class="muted">上海入学规则：小学一年级入学当年 <strong>8月31日前年满6周岁</strong>。拖动月份即可重算整条时间线（月粒度估算，精确以当年官方细则为准）。</p>
+      <label class="field">
+        <span>出生年份</span>
+        <select id="birthYear">
+          <option>2022</option><option>2023</option><option selected>2024</option><option>2025</option><option>2026</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>出生月份</span>
+        <select id="birthMonth">
+          <option value="1">1月</option><option value="2">2月</option><option value="3" selected>3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+        </select>
+      </label>
+    </div>
+    <div class="calc-out">
+      <div class="out-row"><span>入幼儿园（小班）</span><b><span class="dy" data-o="-3">2027</span> 年 9 月</b></div>
+      <div class="out-row"><span>幼升小信息登记</span><b><span class="dy" data-o="0">2030</span> 年 4 月前后</b></div>
+      <div class="out-row"><span>入读小学一年级</span><b><span class="dy" data-o="0">2030</span> 年 9 月</b></div>
+      <div class="out-row"><span>小学五年级（报考年级）</span><b><span class="dy" data-o="4">2034</span> 年 9 月开学</b></div>
+      <div class="out-row hot"><span>🔥 三公报名 · 评估 · 录取</span><b><span class="dy" data-o="5">2035</span> 年 4–5 月</b></div>
+      <div class="out-row"><span>若上岸，入读三公初中</span><b><span class="dy" data-o="5">2035</span> 年 9 月</b></div>
+    </div>
+  </div>
+</section>
+<section class="section alt" id="liucheng">
+  <div class="section-inner">
+    <h2 class="sec-title">06 · 每年4月的“战斗节奏”（以2026为例）</h2>
+    <p class="sec-lead">这套节奏每年几乎复刻：<strong>简章发布 → 报名 → 初审 → 评估 → 放榜</strong>。五年级那年照此执行即可，现在只需记住“每年4月8日前后留意官网”。</p>
+
+    <div class="flow-grid">
+      <div class="flow-step"><b>4月8日前后</b><span>三校同日发布招生简章（上观新闻/各校公众号都会转载）</span></div>
+      <div class="flow-step"><b>4月10–15日</b><span>各校线上报名/登记，截止时间精确到小时；同步准备佐证材料上传</span></div>
+      <div class="flow-step"><b>4月15日前后</b><span>初审/摇号结果查询（上实4月15日、上外4月15日、浦外4月16-17日查并打印邀请函）</span></div>
+      <div class="flow-step"><b>4月18日前后</b><span>评估集中日：2026年上外附中、浦外均为4月18日；上实初中评估时间另通知</span></div>
+      <div class="flow-step"><b>4月20–24日</b><span>官网公示录取结果（上外/浦外）→ 5月起未录取者进入公办对口分配与民办摇号</span></div>
+    </div>
+
+    <div class="notice soft">
+      <h4>三校2026年招生名额一览（含近两年对比）</h4>
+      <table>
+        <thead><tr><th>学校 / 通道</th><th>2025</th><th>2026</th><th>备注</th></tr></thead>
+        <tbody>
+          <tr><td>上实 初中（全市）</td><td>140</td><td>140</td><td>“学制三年，含预初”</td></tr>
+          <tr><td>上实 小学部（幼升小，全市）</td><td>60</td><td>60</td><td>学制四年；摇号定入围（2025/2026）</td></tr>
+          <tr><td>上外附中 本部（全市）</td><td>240</td><td>240</td><td>含各类外语班</td></tr>
+          <tr><td>上外附中东校（虹口区属）</td><td>120</td><td>120</td><td>与本部同步招生</td></tr>
+          <tr><td>浦外（浦东370 + 非浦东60）</td><td>430</td><td>430</td><td>2025年浦东名额由290扩招至370</td></tr>
+          <tr><td><b>三公初中口径合计</b></td><td><b>810</b></td><td><b>810</b></td><td>不含上实小学部与东校；加东校为930席</td></tr>
+        </tbody>
+      </table>
+      <p class="small muted">数字来源：2025/2026年三校官方简章（见<a href="sources.html">来源</a>）。竞争热度参考：2025年三公面单约4600张、录取约930席（含东校），全市小学毕业生约18万。</p>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-inner">
+    <p><strong>沪上三公 · 十年上岸规划</strong>（2岁半起步版）｜整理于2026年9月，将随官方简章更新</p>
+    <p class="small">快捷跳转：
+      <a href="roadmap.html">十年路线</a> · <a href="action.html">落地实操</a> ·
+      <a href="schools.html">三校档案</a> · <a href="process.html">报名流程</a> ·
+      <a href="resources.html">学习资源</a> · <a href="tools.html">打印工具</a> ·
+      <a href="faq.html">FAQ</a> · <a href="sources.html">来源</a>
+    </p>
+    <p class="small muted">给孩子最好的规划，是让他十年后依然爱学习、能专注、睡得香。💤</p>
+    <p><a href="#top">↑ 回到顶部</a></p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>首页 · 沪上三公上岸规划</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/tools.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">🎯 沪上三公上岸规划</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">首页</a>
+      <a href="roadmap.html">十年路线</a>
+      <a href="action.html">落地实操</a>
+      <a href="schools.html">三校档案</a>
+      <a href="process.html">报名流程</a>
+      <a href="profile.html">上岸配置</a>
+      <a href="resources.html">学习资源</a>
+      <a href="tools.html">打印工具</a>
+      <a href="faq.html">FAQ</a>
+      <a href="planb.html">Plan B</a>
+      <a href="sources.html">来源</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<!-- ============ Hero ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-kicker">上海 · 特殊公办提前批 · 小升初长线规划</p>
+    <h1>家有2岁半，冲“三公”<br>一份看得懂、跟得上的十年路线图</h1>
+    <p class="hero-sub">
+      “三公”指上海实验学校（上实）、上外附中、上外浦外——三所可面向全市招生的公办学校。
+      对 2 岁半的孩子来说，真正的战场在 <strong>约 2035 年 4 月的小升初报名</strong>，
+      我们提前布局的，不是焦虑，而是时间与习惯。
+    </p>
+    <div class="hero-chips">
+      <span class="chip">👶 孩子现在：约2岁半（2023年9月–2024年8月出生推算）</span>
+      <span class="chip">🏫 幼升小窗口：约 <span class="dy" data-o="0">2030</span> 年 4 月（信息登记）</span>
+      <span class="chip">🚀 三公小升初：约 <span class="dy" data-o="5">2035</span> 年 4 月报名 · 4-5月评估录取</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="roadmap.html">先看十年路线图 ↓</a>
+      <button class="btn btn-ghost" onclick="window.print()">🖨️ 打印本页规划</button>
+    </div>
+    <p class="hero-note">⚠️ 整理时间：2026年9月。三校每年4月上旬发布新简章，名额与流程逐年微调，本页所有数字以「2025/2026 官方简章 + 主流公开报道」为准，落地前务必核对当年官方原文。</p>
+  </div>
+</section>
+
+<section class="calc section" aria-label="入学年份推算">
+  <div class="section-inner calc-grid">
+    <div class="calc-control">
+      <h3>📅 孩子生日不同，时间线整体平移</h3>
+      <p class="muted">上海入学规则：小学一年级入学当年 <strong>8月31日前年满6周岁</strong>。拖动月份即可重算整条时间线（月粒度估算，精确以当年官方细则为准）。</p>
+      <label class="field">
+        <span>出生年份</span>
+        <select id="birthYear">
+          <option>2022</option><option>2023</option><option selected>2024</option><option>2025</option><option>2026</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>出生月份</span>
+        <select id="birthMonth">
+          <option value="1">1月</option><option value="2">2月</option><option value="3" selected>3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+        </select>
+      </label>
+    </div>
+    <div class="calc-out">
+      <div class="out-row"><span>入幼儿园（小班）</span><b><span class="dy" data-o="-3">2027</span> 年 9 月</b></div>
+      <div class="out-row"><span>幼升小信息登记</span><b><span class="dy" data-o="0">2030</span> 年 4 月前后</b></div>
+      <div class="out-row"><span>入读小学一年级</span><b><span class="dy" data-o="0">2030</span> 年 9 月</b></div>
+      <div class="out-row"><span>小学五年级（报考年级）</span><b><span class="dy" data-o="4">2034</span> 年 9 月开学</b></div>
+      <div class="out-row hot"><span>🔥 三公报名 · 评估 · 录取</span><b><span class="dy" data-o="5">2035</span> 年 4–5 月</b></div>
+      <div class="out-row"><span>若上岸，入读三公初中</span><b><span class="dy" data-o="5">2035</span> 年 9 月</b></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="jianjie">
+  <div class="section-inner">
+    <h2 class="sec-title">01 · 先把“三公”讲清楚</h2>
+    <p class="sec-lead">它不是一个神秘的门派，而是一个<strong>明确的时间表 + 三条不同的赛道</strong>。看懂规则，才不会把力气用错地方。</p>
+
+    <div class="card-grid three">
+      <article class="card">
+        <h3>上实 <span class="tag" style="--c:#6d28d9">全市唯一学制改革校</span></h3>
+        <p class="small">上海实验学校，公办。十年一贯制学制改革实验项目学校，学生可用约10年完成小学到高中12年课程（比同龄人更早进入大学方向）。理科、科创氛围浓，2025年起开设数学班与信奥方向（机构整理，非简章明文）。</p>
+      </article>
+      <article class="card">
+        <h3>上外附中 <span class="tag" style="--c:#dc2626">“神仙学校”</span></h3>
+        <p class="small">上海外国语大学附属外国语学校，直属国家教育部，全国16所具保送生推荐资格的外国语学校之一。初高中七年一贯，外语小班化、多语种（英德法日俄西葡意阿希 10 门外语），近年新增多语种科创班。</p>
+      </article>
+      <article class="card">
+        <h3>上外浦外 <span class="tag" style="--c:#0f766e">规模最大 · “半仙”</span></h3>
+        <p class="small">上海外国语大学附属浦东外国语学校，公办寄宿制、具保送推荐资格。初中学制4年（含预初1年）+高中3年，直升考通过者升本校高中。招生量大、浦东生源名额多，是相对“够得着”的选择。</p>
+      </article>
+    </div>
+
+    <div class="notice">
+      <h3>为什么值得了解？四个关键词</h3>
+      <ul class="grid2">
+        <li><b>① 全市招生：</b>不受学区、房产限制（凭上海户籍或居住证积分达标即可报名），这是它与普通对口公办最大的不同。</li>
+        <li><b>② 提前批次：</b>每年4月上旬发简章、4月中下旬评估、4月底前放榜，早于5月民办初中报名与摇号——相当于“前置彩蛋”，通常不占用后续公办对口 / 民办摇号机会（以当年官方流程为准）。</li>
+        <li><b>③ 公办收费：</b>按公办学校标准收费，但享受特殊学制、外语资源与较高出口。</li>
+        <li><b>④ 出口特殊：</b>上外系有外语类保送资格，上实有学制与科创体系——进三公本质是“更早锁定一条路”，而非简单“比对口更好”。</li>
+      </ul>
+      <p class="small muted">⚠️ 别被“上岸”神话带偏：2025年全市小学毕业生约18万，三公（含上外东校）录取约930人，粗算录取率仅约0.5%；即便拿到评估“面单”（约4600张），平均录取率也约20%。它值得努力，但不值得孤注一掷。</p>
+    </div>
+  </div>
+</section>
+<section class="section" id="mubiao">
+  <div class="section-inner">
+    <h2 class="sec-title">02 · 目标拆解：你其实有“两条通路”</h2>
+    <p class="sec-lead">大多数家长只盯着小升初那一次。对2岁半的孩子，真正的规划是：<strong>先走好普适路径（对口小学 + 校内优秀），再在关键窗口多领一张“入场券”</strong>。</p>
+
+    <div class="path-grid">
+      <article class="path-card main">
+        <h3>🅰 主线：正常入学 + 五年级冲三公初中</h3>
+        <ul>
+          <li>约 <span class="dy" data-o="0">2030</span> 年 9 月入读对口公办小学（或摇号民办）；</li>
+          <li>小学 1–5 年级：校内全优 + 成长手册漂亮 + 学科素养（英语、数学思维）+ 特长与荣誉记录；</li>
+          <li>约 <span class="dy" data-o="5">2035</span> 年 4 月（五年级下）：向三校官网线上报名，上传佐证材料 → 初审（面单）→ 评估 → 放榜；</li>
+          <li>未被录取：回到公办对口 / 民办摇号流程，几乎零损失——这就是“进可攻、退可守”。</li>
+        </ul>
+      </article>
+      <article class="path-card alt">
+        <h3>🅱 支线：<span class="dy" data-o="0">2030</span> 年幼升小时，可多报一次“上实小学部”</h3>
+        <ul>
+          <li>上实小学部面向全市招一年级 60 名（学制四年，2026年为例）；</li>
+          <li>流程：网上登记 → <b>摇号定入围</b>（2025/2026 简章如此）→ 入围者参加评估 → 录取公示；</li>
+          <li>进了上实小学部 → 4 年小学 → 校内直升初中部，等于提前拿到“准三公”身份；</li>
+          <li>没摇中/没录取 → 完全不影响后续对口公办与民办摇号，可放心当“加试”。</li>
+        </ul>
+        <p class="small">注：上实小学部招生对象按全市统一入学年龄段；幼升小需同步在市“义务教育入学报名系统”做信息登记。当年细节以简章为准。</p>
+      </article>
+    </div>
+
+    <div class="notice soft">
+      <h3>户籍 / 资格自查（现在就做）</h3>
+      <ul class="grid2">
+        <li>✅ <b>上海户籍：</b>三校报名均认可常住户籍。</li>
+        <li>✅ <b>非沪籍：</b>需持有有效期内《上海市居住证》且<b>父母一方积分达到标准分值</b>——请尽早核对积分与居住证有效期，这是硬门槛。</li>
+        <li>✅ 在沪台胞、港澳永久居民等：浦外简章亦接受（其他两校以当年简章为准）。</li>
+        <li>✅ 户籍所在区的对口公办质量，决定了“兜底”质量——这也是现在就要做功课的事（买房/落户/转户口均有年限要求，越早越好）。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-inner">
+    <p><strong>沪上三公 · 十年上岸规划</strong>（2岁半起步版）｜整理于2026年9月，将随官方简章更新</p>
+    <p class="small">快捷跳转：
+      <a href="roadmap.html">十年路线</a> · <a href="action.html">落地实操</a> ·
+      <a href="schools.html">三校档案</a> · <a href="process.html">报名流程</a> ·
+      <a href="resources.html">学习资源</a> · <a href="tools.html">打印工具</a> ·
+      <a href="faq.html">FAQ</a> · <a href="sources.html">来源</a>
+    </p>
+    <p class="small muted">给孩子最好的规划，是让他十年后依然爱学习、能专注、睡得香。💤</p>
+    <p><a href="#top">↑ 回到顶部</a></p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沪上三公规划 · 可打印工具包</title>
+<meta name="description" content="沪上三公十年规划配套的可打印模板：启蒙自检表、每周节奏表、学期规划页、五年级冲刺月历、报名材料核对表、三校对比决策表。">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/tools.css">
+<style>
+  /* 工具包专用：打印友好 */
+  :root{--ink:#111;}
+  body{background:#fff}
+  .tp-head{max-width:900px;margin:0 auto;padding:34px 22px 10px}
+  .tp-head h1{font-size:1.5rem;margin-bottom:10px}
+  .tp-head p{color:#333;font-size:.92rem;max-width:760px}
+  .tp-index{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+  .tp-index a{font-size:.85rem;padding:5px 12px;border:1px solid #cbd5e1;border-radius:999px;background:#f8fafc;color:#1e40af;text-decoration:none}
+  .pt{max-width:900px;margin:0 auto;padding:26px 22px;page-break-after:always}
+  .pt:last-child{page-break-after:auto}
+  .pt h2{font-size:1.15rem;border-bottom:2px solid #111;padding-bottom:8px;margin-bottom:12px}
+  .pt .lead{font-size:.9rem;color:#333;margin-bottom:14px}
+  .chk{list-style:none;display:grid;gap:7px}
+  .chk li{display:flex;gap:9px;align-items:flex-start;font-size:.92rem}
+  .chk input{width:16px;height:16px;flex:none;margin-top:3px}
+  .line{margin-top:14px}
+  .line p{border-bottom:1px dotted #94a3b8;height:2em;margin:2px 0}
+  .pt table{font-size:.9rem;margin:10px 0}
+  .pt th{background:#f1f5f9}
+  .pt td{height:auto;vertical-align:top}
+  .cell-tall td{height:44px}
+  .score-cell{min-width:64px}
+  .note{font-size:.8rem;color:#444;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px 14px;margin-top:12px}
+  .no-print{display:block}
+  .btn-print{display:inline-block;margin-top:8px;background:#1e3a8a;color:#fff;border:none;border-radius:10px;padding:9px 20px;font-size:.95rem;cursor:pointer;font-family:inherit}
+  @media print{
+    .no-print{display:none !important}
+    body{font-size:13px}
+    .pt{padding:6mm 0}
+    input[type=checkbox]{accent-color:#111}
+    a{color:#111;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="tp-head no-print">
+  <h1>🖨️ 沪上三公十年规划 · 打印工具包</h1>
+  <p><strong>用法：</strong>用浏览器打开本页 → Ctrl/Cmd+P → 每张模板自动分页，按需选择页码打印即可。
+  年份按“2024 年出生 → <span class="dy" data-o="0">2030</span> 年入小学 → <span class="dy" data-o="5">2035</span> 年冲三公”推算；孩子出生月份不同请整体平移，可回主站 <a href="index.html">index.html</a> 顶部拖动生日自动重算。</p>
+  <div class="tp-index">
+    <a href="#p0">🍼 0-6岁启蒙自检表</a>
+    <a href="#p1">🗓️ 每周节奏表</a>
+    <a href="#p2">📚 学期规划页</a>
+    <a href="#p3">🚀 五年级冲刺月历</a>
+    <a href="#p4">📁 报名材料核对表</a>
+    <a href="#p5">⚖️ 三校对比决策表</a>
+  </div>
+  <button class="btn-print" onclick="window.print()">打印全部（或按 Ctrl/Cmd+P 自选页码）</button>
+  <p style="margin-top:10px">👇 以下为模板内容，打印时可隐藏本栏。</p>
+</header>
+
+<!-- p0 启蒙自检 -->
+<section class="pt" id="p0">
+  <h2>🍼 0–6 岁启蒙自检表（每半年一张）</h2>
+  <p class="lead">年龄段：□ 2.5-3岁 □ 小班 □ 中班 □ 大班　｜　日期：＿＿＿＿＿＿　检查人：＿＿＿＿＿＿</p>
+  <table>
+    <thead><tr><th style="width:22%">领域</th><th>打勾项（符合画√，学期中每 2 个月复查一次）</th></tr></thead>
+    <tbody>
+      <tr><td><b>身体</b></td><td>
+        <ul class="chk">
+          <li><input type="checkbox"> 每天户外 ≥1 小时，每周 ≥3 次中高强度运动</li>
+          <li><input type="checkbox"> 睡眠时长达标（幼儿园 ≥10 小时）且入睡规律</li>
+          <li><input type="checkbox"> 视力保护：屏幕每天累计 ≤1 小时、分段使用、2 米外</li>
+        </ul></td></tr>
+      <tr><td><b>语言</b></td><td>
+        <ul class="chk">
+          <li><input type="checkbox"> 亲子共读每天 ≥20 分钟，本月新读 ≥6 本</li>
+          <li><input type="checkbox"> 能完整复述一个小故事 / 说清一件事（小班起）</li>
+          <li><input type="checkbox"> 英语：每天磨耳朵 15 分钟＋能跟唱/跟读 2-3 句</li>
+        </ul></td></tr>
+      <tr><td><b>数学</b></td><td>
+        <ul class="chk">
+          <li><input type="checkbox"> 数感游戏每周 ≥3 次（数数/比较/分东西/拼搭）</li>
+          <li><input type="checkbox"> 按年龄段达到：唱数 / 点数 / 10 以内加减 / 100 以内数感</li>
+        </ul></td></tr>
+      <tr><td><b>习惯</b></td><td>
+        <ul class="chk">
+          <li><input type="checkbox"> 自己能做的事自己做（穿衣/收玩具/用筷等）</li>
+          <li><input type="checkbox"> 能专注玩耍/看书 ≥15 分钟（3岁）→ ≥30 分钟（6岁）</li>
+          <li><input type="checkbox"> 情绪表达：会用语言说“我不高兴”，而非哭闹</li>
+        </ul></td></tr>
+      <tr><td><b>兴趣</b></td><td>
+        <ul class="chk">
+          <li><input type="checkbox"> 本月孩子最投入的一件事：＿＿＿＿＿＿＿＿＿＿</li>
+          <li><input type="checkbox"> 特长试错记录（4岁起）：试过＿＿＿，表现出兴趣的：＿＿＿</li>
+        </ul></td></tr>
+    </tbody>
+  </table>
+  <div class="note"><b>下阶段重点关注（写给两个月后的自己）：</b>＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+</section>
+
+<!-- p1 每周节奏表 -->
+<section class="pt" id="p1">
+  <h2>🗓️ 每周节奏表（空白版）</h2>
+  <p class="lead">先填“睡眠与运动”两行（不可压缩），再填学习与兴趣。学段：□ 幼儿园 □ G1-2 □ G3-5　第＿＿周</p>
+  <table>
+    <thead><tr><th style="width:15%">时间段</th><th>周一</th><th>周二</th><th>周三</th><th>周四</th><th>周五</th><th>周六</th><th>周日</th></tr></thead>
+    <tbody class="cell-tall">
+      <tr><td><b>早上<br>起床-上学</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><b>放学后<br>户外</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><b>作业/校内</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><b>学习模块<br>(阅读/英语/思维)</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><b>特长/兴趣</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><b>家庭/留白</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><b>睡眠</b></td><td colspan="7" style="text-align:center">目标：＿＿＿点入睡（幼儿园/小学阶段 ≥10 小时）</td></tr>
+    </tbody>
+  </table>
+  <div class="line"><p><b>本周必做 3 件事：</b>① ＿＿＿＿＿＿＿＿＿ ② ＿＿＿＿＿＿＿＿＿ ③ ＿＿＿＿＿＿＿＿＿</p></div>
+  <div class="line"><p><b>运动：</b>本周累计＿＿＿小时　<b>屏幕：</b>每天≤＿＿＿分钟　<b>阅读：</b>本周共读＿＿＿本</p></div>
+  <div class="note">建议贴在书桌/冰箱上，周日晚上花 5 分钟和孩子一起画勾复盘；<b>留白格不许填满</b>——那是给孩子发呆与创造的时间。</div>
+</section>
+
+<!-- p2 学期规划页 -->
+<section class="pt" id="p2">
+  <h2>📚 学期规划页（每学期一张）</h2>
+  <p class="lead">学期：＿＿＿＿学年 第＿＿学期　孩子年级：＿＿＿　日期：＿＿＿＿＿＿</p>
+  <table>
+    <tbody>
+      <tr><td style="width:20%"><b>本学期目标</b><br><span class="note" style="background:none;border:none;padding:0">写 3 条，可衡量</span></td><td>①＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿<br>②＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿<br>③＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</td></tr>
+      <tr><td><b>语文重点</b></td><td>（阅读量 / 识字 / 古诗 / 作文）＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</td></tr>
+      <tr><td><b>数学重点</b></td><td>（课内巩固 / 思维体系 / 竞赛节奏）＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</td></tr>
+      <tr><td><b>英语重点</b></td><td>（主线教材 / 分级阅读 / 目标考试）＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</td></tr>
+      <tr><td><b>特长 / 运动</b></td><td>＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</td></tr>
+      <tr><td><b>参赛 / 考证计划</b></td><td>名称＿＿＿＿ 时间＿＿＿＿ 名称＿＿＿＿ 时间＿＿＿＿ 名称＿＿＿＿ 时间＿＿＿＿</td></tr>
+    </tbody>
+  </table>
+  <div class="line"><p><b>书单（本学期计划读完）：</b>①＿＿＿＿＿＿ ②＿＿＿＿＿＿ ③＿＿＿＿＿＿ ④＿＿＿＿＿＿ ⑤＿＿＿＿＿＿ ⑥＿＿＿＿＿＿ ⑦＿＿＿＿＿＿ ⑧＿＿＿＿＿＿</p></div>
+  <div class="line"><p><b>期末复盘：</b>三个目标达成情况：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿；下学期最重要的一件事：＿＿＿＿＿＿＿＿＿＿＿＿</p></div>
+  <div class="note">每学期一张＝一年两张，毕业时你会拥有小学 10 张“决策日志”，比任何经验帖都了解自己的孩子。</div>
+</section>
+
+<!-- p3 G5 冲刺月历 -->
+<section class="pt" id="p3">
+  <h2>🚀 五年级“决战 2035”逐月行动表（2034.9 – 2035.6）</h2>
+  <p class="lead">每月初看一次本表：先做“必做”，再做“加做”。（若孩子出生月份不同，年份整体平移。）</p>
+  <table>
+    <thead><tr><th style="width:11%">月份</th><th>本月必做</th><th>完成</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>2034.9</td><td>制定“决战年”总计划；锁定 AMC8/英语收官考的时间与报名渠道</td><td><input type="checkbox"></td><td></td></tr>
+      <tr><td>2034.10</td><td>成长手册五年级记录保持全优；校内职务与荣誉不松懈；秋季赛事若有则参加</td><td><input type="checkbox"></td><td></td></tr>
+      <tr><td>2034.11</td><td>报名次年 1 月 AMC8 等最后证书考试（以官网窗口为准）；准备作文/口试素材库</td><td><input type="checkbox"></td><td></td></tr>
+      <tr><td>2034.12</td><td>期末复习；把四五年级成长手册关键页拍照/扫描归档</td><td><input type="checkbox"></td><td></td></tr>
+      <tr><td>2035.1</td><td>🎯 最后一次 AMC8 等压轴证书考试；寒假冲刺计划上墙</td><td><input type="checkbox"></td><td></td></tr>
+      <tr><td>2035.2</td><td>材料三件套收尾：扫描归档→精选排序→写自荐/报名信息草稿；每周 1 次口试模拟</td><td><input type="checkbox"></td><td></td></tr>
+      <tr><td>2035.3</td><td>对照上一年简章预演材料；关注三校公众号与市教委政策；确认报名资格（户籍/居住证积分）</td><td><input type="checkbox"></td><td></td></tr>
+      <tr><td><b>2035.4</b></td><td><b>三公月：简章发布→线上报名（截止到小时）→查初审→按通知评估</b></td><td><input type="checkbox"></td><td></td></tr>
+      <tr><td>2035.5</td><td>放榜；未录取者按公办对口/民办摇号正常推进；归档五年级完整档案</td><td><input type="checkbox"></td><td></td></tr>
+      <tr><td>2035.6</td><td>毕业季；若上岸：衔接计划（外语/数学自学、初中作息）启动</td><td><input type="checkbox"></td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="note">口诀：<b>材料提前 2 个月做完，4 月只做“报名”这一件事。</b>评估当天：证件、打印好的登记表/邀请函、水与点心、提前 30 分钟到场——比多刷一道题更重要。</div>
+</section>
+
+<!-- p4 材料核对表 -->
+<section class="pt" id="p4">
+  <h2>📁 三公报名材料核对表（4 月报名前两周使用）</h2>
+  <p class="lead">按三校当年简章为准逐项核对；打 √ 后把文件放进“报名文件夹”，双备份（本地+网盘）。</p>
+  <table>
+    <thead><tr><th style="width:60%">材料</th><th>说明</th><th>√</th></tr></thead>
+    <tbody>
+      <tr><td>学生身份证 / 户口簿页（或居住证＋积分通知书）</td><td>扫描清晰 PDF</td><td><input type="checkbox"></td></tr>
+      <tr><td>四至五年级成长手册关键页（成绩与评语）</td><td>上实初中明文关注</td><td><input type="checkbox"></td></tr>
+      <tr><td>五年级上/下学期在校成绩证明（如有）</td><td>学校出具</td><td><input type="checkbox"></td></tr>
+      <tr><td>荣誉与任职：校优/优秀少先队员/中队委等证明</td><td>选有公章的</td><td><input type="checkbox"></td></tr>
+      <tr><td>学科类证书：数学（AMC8 等）、英语（KET/PET/小托福）</td><td>含成绩单</td><td><input type="checkbox"></td></tr>
+      <tr><td>语文/综合：古诗文、作文、科创、信息学等证书</td><td>按时间倒序</td><td><input type="checkbox"></td></tr>
+      <tr><td>特长证明：艺术/体育考级与比赛</td><td>选 1-2 项主线即可</td><td><input type="checkbox"></td></tr>
+      <tr><td>代表性作品/项目（科创作品说明、发表作文等）</td><td>1-2 页内</td><td><input type="checkbox"></td></tr>
+      <tr><td>报名表信息草稿（自荐介绍 300-500 字）</td><td>突出主线与数据</td><td><input type="checkbox"></td></tr>
+      <tr><td>家长联系方式与常备证件复印件×2</td><td>评估日随身带</td><td><input type="checkbox"></td></tr>
+    </tbody>
+  </table>
+  <div class="note">⚠️ 网申上传页面对单文件大小/格式有要求（常见 PDF、≤5MB/个），提前压缩试传一次；截止时间是<b>精确到小时</b>的硬期限，宁早半天，别赶最后一小时。</div>
+</section>
+
+<!-- p5 决策表 -->
+<section class="pt" id="p5">
+  <h2>⚖️ 三校对比决策表（报名前全家一起打勾）</h2>
+  <p class="lead">评分：1=不符合 → 5=非常符合。总分高的学校优先准备；并列时看“孩子自己想去哪所”。</p>
+  <table>
+    <thead><tr><th style="width:26%">维度</th><th>上实</th><th>上外附中</th><th>上外浦外</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>孩子外语兴趣与素养</td><td class="score-cell"></td><td class="score-cell"></td><td class="score-cell"></td><td></td></tr>
+      <tr><td>孩子理科/科创兴趣</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>学制匹配（压缩学制/七年一贯/初中4年+寄宿）</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>升学出口偏好（保送/出国/高考主赛道）</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>通勤/住宿接受度</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>家庭资源（课外投入/信息渠道）</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>孩子本人的意愿</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><b>小计</b></td><td><b></b></td><td><b></b></td><td><b></b></td><td>满分 35</td></tr>
+    </tbody>
+  </table>
+  <div class="line"><p><b>全家讨论结论：</b>第一志愿＿＿＿＿＿＿＿　第二志愿＿＿＿＿＿＿＿　（报名可填多所，但评估若同日只能取一）</p></div>
+  <div class="note">别让“哪所名气大”替你做决定——三所都能出好学生，适合与热爱才是最大的确定性。数据基准见主站<a href="schools.html">三校档案</a>。</div>
+</section>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>十年路线 · 沪上三公上岸规划</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/tools.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">🎯 沪上三公上岸规划</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首页</a>
+      <a href="roadmap.html" class="active">十年路线</a>
+      <a href="action.html">落地实操</a>
+      <a href="schools.html">三校档案</a>
+      <a href="process.html">报名流程</a>
+      <a href="profile.html">上岸配置</a>
+      <a href="resources.html">学习资源</a>
+      <a href="tools.html">打印工具</a>
+      <a href="faq.html">FAQ</a>
+      <a href="planb.html">Plan B</a>
+      <a href="sources.html">来源</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<section class="band">
+  <div class="section-inner">
+    <p class="band-kicker"><a href="index.html">🏠 首页</a> ／ 03 · 十年路线图（2026 → 2035）</p>
+    <h1>03 · 十年路线图（2026 → 2035）</h1>
+    <p class="band-desc">八个阶段逐项打勾：每个年龄段只做这个年龄段该做的事。</p>
+  </div>
+</section>
+
+<section class="calc section" aria-label="入学年份推算">
+  <div class="section-inner calc-grid">
+    <div class="calc-control">
+      <h3>📅 孩子生日不同，时间线整体平移</h3>
+      <p class="muted">上海入学规则：小学一年级入学当年 <strong>8月31日前年满6周岁</strong>。拖动月份即可重算整条时间线（月粒度估算，精确以当年官方细则为准）。</p>
+      <label class="field">
+        <span>出生年份</span>
+        <select id="birthYear">
+          <option>2022</option><option>2023</option><option selected>2024</option><option>2025</option><option>2026</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>出生月份</span>
+        <select id="birthMonth">
+          <option value="1">1月</option><option value="2">2月</option><option value="3" selected>3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+        </select>
+      </label>
+    </div>
+    <div class="calc-out">
+      <div class="out-row"><span>入幼儿园（小班）</span><b><span class="dy" data-o="-3">2027</span> 年 9 月</b></div>
+      <div class="out-row"><span>幼升小信息登记</span><b><span class="dy" data-o="0">2030</span> 年 4 月前后</b></div>
+      <div class="out-row"><span>入读小学一年级</span><b><span class="dy" data-o="0">2030</span> 年 9 月</b></div>
+      <div class="out-row"><span>小学五年级（报考年级）</span><b><span class="dy" data-o="4">2034</span> 年 9 月开学</b></div>
+      <div class="out-row hot"><span>🔥 三公报名 · 评估 · 录取</span><b><span class="dy" data-o="5">2035</span> 年 4–5 月</b></div>
+      <div class="out-row"><span>若上岸，入读三公初中</span><b><span class="dy" data-o="5">2035</span> 年 9 月</b></div>
+    </div>
+  </div>
+</section>
+<section class="section alt" id="timeline">
+  <div class="section-inner">
+    <h2 class="sec-title">03 · 十年路线图（2026 → 2035）</h2>
+    <p class="sec-lead">以“习惯 → 兴趣 → 素养 → 证书与荣誉 → 应战”的顺序推进。原则只有一条：<strong>每个阶段只做这个年龄段该做的事，把“卷”变成可持续的习惯。</strong></p>
+
+    <div class="timeline" id="roadmap">
+
+      <!-- S0 -->
+      <article class="tl-item">
+        <div class="tl-rail"><span class="tl-dot">0</span></div>
+        <div class="tl-body">
+          <header>
+            <span class="tl-tag">现在 · 2.5岁左右</span>
+            <h3>阶段0｜慢即是快：观察与陪伴</h3>
+            <p class="tl-period">约 <span class="dy" data-o="-3">2027</span> 年入园前（现在 ~ 2岁半到3岁）</p>
+          </header>
+          <p class="tl-goal">目标：健康、安全、亲子依恋——这是所有“学霸配置”的地基。此阶段唯一要“鸡”的是父母的信息差，而不是孩子。</p>
+          <ul class="tl-todo">
+            <li><input type="checkbox"> 建立规律作息、户外运动与自主进食/如厕等生活自理习惯；</li>
+            <li><input type="checkbox"> 每天亲子共读 15–30 分钟，中英文绘本都行，培养“书是好东西”的第一印象；</li>
+            <li><input type="checkbox"> 大量语言输入：多说、多听（儿歌、童谣、故事），2岁半处于语言爆发期；</li>
+            <li><input type="checkbox"> 玩中学：积木、拼图、涂鸦、过家家——动手与想象力比识字更重要；</li>
+            <li><input type="checkbox"> 观察孩子的兴趣与性格（安静/好动、专注时长），为特长方向做第一手记录。</li>
+          </ul>
+          <p class="tl-note">💡 现在最该做的事：①把“对口公办小学是哪所、质量如何”查清楚；②确认户籍与居住证积分状态；③关注上面 <a href="resources.html">学习资源中心</a> 里的官方公众号与政策渠道——每年4月的信息，别人提前一周知道就够了。</p>
+        </div>
+      </article>
+
+      <!-- S1 -->
+      <article class="tl-item">
+        <div class="tl-rail"><span class="tl-dot">1</span></div>
+        <div class="tl-body">
+          <header>
+            <span class="tl-tag">幼儿园小班 · 3-4岁</span>
+            <h3>阶段1｜英语磨耳朵 + 认字兴趣 + 数感萌芽</h3>
+            <p class="tl-period">约 <span class="dy" data-o="-3">2027</span>.9 – <span class="dy" data-o="-2">2028</span>.8</p>
+          </header>
+          <p class="tl-goal">目标：孩子愿意开口、愿意翻书、觉得数字好玩；不考核、不背单词、不写作业。</p>
+          <ul class="tl-todo">
+            <li><input type="checkbox"> 英语：每天 15–20 分钟“磨耳朵”——SSS儿歌、英文动画（小猪佩奇等）、简单绘本亲子共读（培生/牛津树入门、Raz AA–A 级）；</li>
+            <li><input type="checkbox"> 语文：亲子阅读每天坚持；可引入《小羊上山》等分级读物与趣味识字，从“认身边字”开始，不强迫；</li>
+            <li><input type="checkbox"> 数学：唱数、点数、比大小、形状与拼搭——生活化数感（上下楼数台阶、分水果）；</li>
+            <li><input type="checkbox"> 运动与自理：骑平衡车/拍球、自己穿脱衣，幼儿园全勤；</li>
+            <li><input type="checkbox"> 情绪与社会性：学会表达、轮流、分享——三公面谈考的就是表达与规则感，从小处养。</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- S2 -->
+      <article class="tl-item">
+        <div class="tl-rail"><span class="tl-dot">2</span></div>
+        <div class="tl-body">
+          <header>
+            <span class="tl-tag">幼儿园中班 · 4-5岁</span>
+            <h3>阶段2｜自主阅读起步 + 计算入门 + 特长“试错期”</h3>
+            <p class="tl-period">约 <span class="dy" data-o="-2">2028</span>.9 – <span class="dy" data-o="-1">2029</span>.8</p>
+          </header>
+          <p class="tl-goal">目标：认字量稳步上台阶（常见目标几百字即可）、能复述小故事；10以内加减熟练；用一年时间让孩子“试”2–3类特长（棋类/乐器/运动/美术/口才），选出真正有兴趣并能坚持的一项。</p>
+          <ul class="tl-todo">
+            <li><input type="checkbox"> 语文：识字量向 500–800 字推进（《四五快读》/识字卡/生活识字），每天固定阅读 30 分钟；听古诗、成语故事，培养语感；</li>
+            <li><input type="checkbox"> 英语：继续听力输入，加入自然拼读启蒙（字母音、CVC），动画从“看热闹”转向“可理解输入”；</li>
+            <li><input type="checkbox"> 数学：10/20 以内加减、简单应用题、思维启蒙（摩比爱数学/逻辑狗等任选一套体系即可）；</li>
+            <li><input type="checkbox"> 表达：看图说话、复述故事、多带孩子去博物馆/科技馆并“说给你听”；</li>
+            <li><input type="checkbox"> 特长试错：4岁开始学乐器/棋类/游泳等不早不晚，但<strong>只选一样坚持</strong>——证书不是目的，专注力与坚持才是。</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- S3 -->
+      <article class="tl-item">
+        <div class="tl-rail"><span class="tl-dot">3</span></div>
+        <div class="tl-body">
+          <header>
+            <span class="tl-tag">幼儿园大班 + 幼升小 · 5-6岁</span>
+            <h3>阶段3｜幼小衔接 + <span class="dy" data-o="0">2030</span> 幼升小“加试”</h3>
+            <p class="tl-period">约 <span class="dy" data-o="-1">2029</span>.9 – <span class="dy" data-o="0">2030</span>.8（信息登记约 <span class="dy" data-o="0">2030</span> 年 4 月）</p>
+          </header>
+          <p class="tl-goal">目标：完成从“玩”到“学”的平稳过渡；同时把上实小学部那次全市“加试”当成一场零成本演习——摇中入围就认真准备，摇不中也毫无损失。</p>
+          <ul class="tl-todo">
+            <li><input type="checkbox"> 幼小衔接：拼音、握笔与正确坐姿、20以内运算熟练、能安静坐 20–30 分钟、听懂并执行指令；</li>
+            <li><input type="checkbox"> <span class="dy" data-o="0">2030</span> 年 3–4 月：关注市教委当年幼升小政策 → 在“上海市义务教育入学报名系统”做信息登记；</li>
+            <li><input type="checkbox"> 同步在官网/公众号登记上实小学部（往年4月中旬，60名，学制四年）→ 摇号定入围 → 入围者按通知参加评估（含活动观察/表达/思维类，历年以学校通知为准）；</li>
+            <li><input type="checkbox"> 按意愿决定是否报名民办小学（超额摇号）——记住三公/民办/对口互不冲突的报名逻辑；</li>
+            <li><input type="checkbox"> 9 月入学后：帮孩子适应“书包、作业、铃声”，前三个月重点抓习惯而非成绩。</li>
+          </ul>
+          <p class="tl-note">💡 上实小学部 2025/2026 均为“网上登记 → 摇号定入围名单 → 评估”。入围与否纯看运气，评估才看实力——把这场经历当成 5 年后大战的“彩排”。</p>
+        </div>
+      </article>
+
+      <!-- S4 -->
+      <article class="tl-item">
+        <div class="tl-rail"><span class="tl-dot">4</span></div>
+        <div class="tl-body">
+          <header>
+            <span class="tl-tag">小学1-2年级 · 6-8岁</span>
+            <h3>阶段4｜习惯定盘星：校内全优 + 英语数学“蓄水”</h3>
+            <p class="tl-period">约 <span class="dy" data-o="0">2030</span>.9 – <span class="dy" data-o="2">2032</span>.8</p>
+          </header>
+          <p class="tl-goal">目标：把“在校表现优秀”变成默认状态。低年级的成长手册、评优记录是五年级报名表里最硬的“素颜证书”。</p>
+          <ul class="tl-todo">
+            <li><input type="checkbox"> 习惯：固定作业时间、限时专注（番茄钟儿童版）、自查错题——比多刷题重要 10 倍；</li>
+            <li><input type="checkbox"> 校内：成绩与课堂表现全优目标，争取校优/中队委等记录（口头表达与责任心是老师评优的核心）；</li>
+            <li><input type="checkbox"> 语文：每天阅读 30–40 分钟，一年级起积累古诗（小学阶段常见要求75+首），练字帖静心；</li>
+            <li><input type="checkbox"> 英语：目标二年级末达剑桥 Movers/接近 KET 水平——词汇与听说为主，报班与否看家庭资源；</li>
+            <li><input type="checkbox"> 数学：在学有余力前提下一周 1–2 次浅奥/思维训练（举一反三等），一二年级以“不怕难题、愿意想”为纲；</li>
+            <li><input type="checkbox"> 特长：坚持阶段2选定的那一项，准备1–2个入门级考级/比赛以赛代练（艺术/体育皆可，注意看官方年龄门槛）；</li>
+            <li><input type="checkbox"> 家长：整理孩子的获奖与作品，建立“成长档案”文件夹（电子扫描件分类归档，五年级直接用）。</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- S5 -->
+      <article class="tl-item">
+        <div class="tl-rail"><span class="tl-dot">5</span></div>
+        <div class="tl-body">
+          <header>
+            <span class="tl-tag">小学3年级 · 8-9岁</span>
+            <h3>阶段5｜正式进入“三公备考主轴”</h3>
+            <p class="tl-period">约 <span class="dy" data-o="2">2032</span>.9 – <span class="dy" data-o="3">2033</span>.8</p>
+          </header>
+          <p class="tl-goal">目标：从“泛兴趣”转向“有方向的素养”。三年级是被机构与家长公认的“分水岭”——多数上岸娃此时已系统化训练。</p>
+          <ul class="tl-todo">
+            <li><input type="checkbox"> 数学：三年级起系统备考 AMC8 / 参与袋鼠、澳洲AMC 等积累赛场经验（AMC8 每年1月考试，四年级/五年级各有一次机会）；</li>
+            <li><input type="checkbox"> 英语：词汇向 3000+ 进发，考过/对标 PET；四年级起冲小托福 850+（网传三公“隐形门槛”，见 <a href="profile.html">上岸配置</a>）；</li>
+            <li><input type="checkbox"> 语文：参加校内外的古诗文大会/汉字小达人等（非强制，学有余力再上）；</li>
+            <li><input type="checkbox"> 科创/信奥（可选）：若孩子对编程有兴趣，三年级是信息学启蒙的好窗口，可为科创班/信奥方向铺路；</li>
+            <li><input type="checkbox"> 荣誉：争取校“优秀少先队员”等校级荣誉（浦外2025年曾明文要求“四五年级校级以上荣誉”，2026年简章虽删去，说明这类记录仍是被关注的信号）；</li>
+            <li><input type="checkbox"> 通识：开始每天看新闻/少儿科普，科学常识是近年评估的高频内容（2025年上实考了物理实验、保温杯/防滑材料等生活科学）。</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- S6 -->
+      <article class="tl-item">
+        <div class="tl-rail"><span class="tl-dot">6</span></div>
+        <div class="tl-body">
+          <header>
+            <span class="tl-tag">小学4年级 · 9-10岁</span>
+            <h3>阶段6｜关键蓄力年：证书收官前的冲刺</h3>
+            <p class="tl-period">约 <span class="dy" data-o="3">2033</span>.9 – <span class="dy" data-o="4">2034</span>.8</p>
+          </header>
+          <p class="tl-goal">目标：四年级是“成长手册四五年级记录”的关键年（上实明文要求四至五年级综合素质优秀），同时把 AMC8/小托福的第一次实战机会用足。</p>
+          <ul class="tl-todo">
+            <li><input type="checkbox"> <span class="dy" data-o="4">2034</span> 年 1 月：四年级参加 AMC8，目标 20 分以上 / 全球前 5%（五年级1月还有最后一次机会）；</li>
+            <li><input type="checkbox"> 英语：四年级完成小托福首考（目标 850+）或 PET 优秀；口语保持日常输出；</li>
+            <li><input type="checkbox"> 校内：四五年级成长手册保持全优；争取区级/市级荣誉或科创比赛奖项（三星章等星星火炬体系若仍存在，量力争取）；</li>
+            <li><input type="checkbox"> 表达与面谈素养：每周一次“三分钟演讲”（讲新闻/讲科学小知识），训练条理与台风；</li>
+            <li><input type="checkbox"> 五年级上（约 <span class="dy" data-o="4">2034</span> 年 9–12 月）前完成所有“最后一次”的考试安排规划。</li>
+          </ul>
+          <p class="tl-note">💡 提醒：竞赛与考级政策在“双减”后逐年收紧（如剑桥考试国内场次、小托福报名渠道等时有变化）。<strong>所有证书都是“佐证”，不是“门票”</strong>——官方报名条件里从不要求任何证书。</p>
+        </div>
+      </article>
+
+      <!-- S7 -->
+      <article class="tl-item">
+        <div class="tl-rail"><span class="tl-dot">7</span></div>
+        <div class="tl-body">
+          <header>
+            <span class="tl-tag">小学5年级 · 10-11岁</span>
+            <h3>阶段7｜决战 <span class="dy" data-o="5">2035</span>：报名 → 评估 → 上岸/回头</h3>
+            <p class="tl-period">约 <span class="dy" data-o="4">2034</span>.9 – <span class="dy" data-o="5">2035</span>.6</p>
+          </header>
+          <p class="tl-goal">目标：像“项目经理”一样把这场仗打完：材料、节奏、心态三者都要在线。此阶段也是历届三公家长最忙的半年。</p>
+          <ul class="tl-todo">
+            <li><input type="checkbox"> <span class="dy" data-o="5">2035</span> 年 1 月：五年级最后一次 AMC8 等“压轴证书”收官；</li>
+            <li><input type="checkbox"> 2–3 月：整理证书/奖状/成长手册关键页，全部扫描成清晰 PDF，按“学科类/荣誉类/特长类/校内成绩”归档排版；</li>
+            <li><input type="checkbox"> 准备自荐/报名表内容：突出逻辑思维、语言表达、科创或外语特长（各校报名表都在线填写，需上传综合素质佐证材料）；</li>
+            <li><input type="checkbox"> 4 月上旬：盯三校官网/公众号 —— 简章通常4月8日前后同时发布；</li>
+            <li><input type="checkbox"> 4月10–15日：完成登记/报名（<b>注意各校截止时间精确到小时</b>，宁可提前半天提交）；</li>
+            <li><input type="checkbox"> 4月中旬：查询初审结果（“面单”），下载打印登记表/邀请函；</li>
+            <li><input type="checkbox"> 4月中下旬：按通知参加评估（近年以人机对话/机考为主，含数学、英语、语文/综合，上实含实验与面谈环节）；</li>
+            <li><input type="checkbox"> 4月下旬：官网公示录取 → 5月起未录取者进入公办对口分配 / 民办摇号流程，平稳过渡，绝不二战式焦虑。</li>
+          </ul>
+          <p class="tl-note">💡 报名可同时登记多所（系统各自独立），但若评估时间重叠只能取舍——如2026年上外附中与浦外评估均安排在4月18日；上实初中评估时间另行通知。五年级家长圈俗语：“能拿到面单已经赢了一半”。</p>
+        </div>
+      </article>
+
+      <!-- S8 -->
+      <article class="tl-item">
+        <div class="tl-rail"><span class="tl-dot">8</span></div>
+        <div class="tl-body">
+          <header>
+            <span class="tl-tag">初中及以后 · 11岁+</span>
+            <h3>阶段8｜上岸之后：这只是另一条路的开始</h3>
+            <p class="tl-period">约 <span class="dy" data-o="5">2035</span> 年 9 月起</p>
+          </header>
+          <p class="tl-goal">目标：适应新学制，保持“长跑心态”。三公的价值在出口（保送/高考/出国），而出口拼的是初中三年到六年的持续优秀。</p>
+          <ul class="tl-todo">
+            <li><input type="checkbox"> 上外附中/东校：七年一贯（预初→初三文化测试直升高中部），高中出口以保送、出国为主、兼有高考；</li>
+            <li><input type="checkbox"> 浦外：初中学制4年（含预初），通过校内直升考试者升本校高中，其余参加中考——高中三年后仍有外语类保送/高考两条路；</li>
+            <li><input type="checkbox"> 上实：进入其十年一贯体系后按学校学制安排（本校小学4年直升初中部，外部考入按初中部学制），高中衔接以学校官方口径为准；</li>
+            <li><input type="checkbox"> 无论哪所：外语保持强项 + 理科不塌方 + 一门特长不丢，才是“保送/高考/出国”三选一的本钱。</li>
+          </ul>
+          <p class="tl-note">💡 再次提醒：三公“路径锁定”是把双刃剑——进入后课程体系、评价方式都不同于普通初中，中途想回中考主赛道成本不低。报考前请确认方向契合（外语/国际/科创），而非盲目追“名校”。</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="print-card">
+      <h3>🧾 十年速查卡（可随本页一起打印）</h3>
+      <table>
+        <thead><tr><th>年龄</th><th>学段</th><th>核心动作</th><th>关键节点（按推算）</th></tr></thead>
+        <tbody>
+          <tr><td>2.5-3岁</td><td>入园前</td><td>作息/阅读/语言输入</td><td>查对口小学、核对户籍与积分</td></tr>
+          <tr><td>3-4岁</td><td>小班</td><td>英语磨耳朵、认字兴趣、数感</td><td>—</td></tr>
+          <tr><td>4-5岁</td><td>中班</td><td>自主阅读、计算入门、特长试错</td><td>—</td></tr>
+          <tr><td>5-6岁</td><td>大班</td><td>幼小衔接</td><td><span class="dy" data-o="0">2030</span>年4月：信息登记+上实小学部摇号加试</td></tr>
+          <tr><td>6-8岁</td><td>G1-G2</td><td>习惯+校内全优+英语/数学蓄水</td><td>成长档案从一年级建起</td></tr>
+          <tr><td>8-9岁</td><td>G3</td><td>进入三公备考主轴</td><td>AMC8系统备考、PET对标</td></tr>
+          <tr><td>9-10岁</td><td>G4</td><td>证书收官前冲刺</td><td><span class="dy" data-o="4">2034</span>年1月：AMC8首考；小托福850+</td></tr>
+          <tr><td>10-11岁</td><td>G5</td><td>材料+报名+评估</td><td><span class="dy" data-o="5">2035</span>年1月AMC8末班；4月报名/评估/放榜</td></tr>
+          <tr><td>11岁+</td><td>初中</td><td>适应学制、长跑</td><td>七年/四年学制内直升考或中考</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-inner">
+    <p><strong>沪上三公 · 十年上岸规划</strong>（2岁半起步版）｜整理于2026年9月，将随官方简章更新</p>
+    <p class="small">快捷跳转：
+      <a href="roadmap.html">十年路线</a> · <a href="action.html">落地实操</a> ·
+      <a href="schools.html">三校档案</a> · <a href="process.html">报名流程</a> ·
+      <a href="resources.html">学习资源</a> · <a href="tools.html">打印工具</a> ·
+      <a href="faq.html">FAQ</a> · <a href="sources.html">来源</a>
+    </p>
+    <p class="small muted">给孩子最好的规划，是让他十年后依然爱学习、能专注、睡得香。💤</p>
+    <p><a href="#top">↑ 回到顶部</a></p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

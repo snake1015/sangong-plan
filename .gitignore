@@ -1,0 +1,13 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+*.log
+
+# 本地编辑器/备份
+.idea/
+.vscode/
+*.swp
+*~
+
+# Cloudflare（如需忽略某些目录不上传，见 DEPLOY.md）
+# .cfignore
