@@ -39,6 +39,7 @@ ANCHOR_PAGE = {
     'plan': 'action.html', 'xiaoxiao': 'schools.html', 'liucheng': 'process.html',
     'peizhi': 'profile.html', 'ziyuan': 'resources.html', 'tools': 'tools.html',
     'faq': 'faq.html', 'bplan': 'planb.html', 'refs': 'sources.html',
+    'practice': 'practice.html',
 }
 
 def rewrite_links(text):
@@ -76,17 +77,20 @@ PAGES = [
     dict(file='resources.html', tab='学习资源', band=('08 · 学习资源中心',
           '考试报名通道、免费官方平台、分龄分科资源卡，以及 GitHub/开源与更多信息渠道。'),
          calc=False, sids=['ziyuan']),
-    dict(file='tools.html',    tab='打印工具',  band=('09 · 可打印工具包',
+    dict(file='practice.html', tab='真题模考', band=('09 · 真题与模考',
+          '官方真题与样题入口 + 站内 51 道原创题库：练习模式、模拟卷A/B、错题本。'),
+         calc=False, sids=['practice'], scripts=['assets/quiz.js']),
+    dict(file='tools.html',    tab='打印工具',  band=('10 · 可打印工具包',
           '6张自带分页的模板：自检表、周节奏表、学期规划、五年级冲刺月历、材料核对、三校对比。'),
          calc=False, sids=['tools']),
-    dict(file='faq.html',      tab='FAQ',      band=('10 · 家长最常问的 10 个问题',
+    dict(file='faq.html',      tab='FAQ',      band=('11 · 家长最常问的 10 个问题',
           '从“现在规划是否太早”到“没上岸怎么办”。'),
          calc=False, sids=['faq']),
-    dict(file='planb.html',    tab='Plan B',   band=('11 · Plan A/B/C/D',
+    dict(file='planb.html',    tab='Plan B',   band=('12 · Plan A/B/C/D',
           '三公只是前置彩蛋：对口公办、民办摇号、国际路线都给你留了后路。'),
          calc=False, sids=['bplan']),
-    dict(file='sources.html',  tab='来源',      band=('12 · 资料来源与免责声明',
-          '官方简章、媒体报道与核验过的学习平台链接；政策以当年官方为准。'),
+    dict(file='sources.html',  tab='来源',      band=('13 · 资料来源与免责声明',
+          '官方简章、媒体报道、核验过的学习平台与真题入口；政策以当年官方为准。'),
          calc=False, sids=['refs']),
 ]
 
@@ -108,7 +112,8 @@ FOOTER = '''<footer class="footer">
     <p class="small">快捷跳转：
       <a href="roadmap.html">十年路线</a> · <a href="action.html">落地实操</a> ·
       <a href="schools.html">三校档案</a> · <a href="process.html">报名流程</a> ·
-      <a href="resources.html">学习资源</a> · <a href="tools.html">打印工具</a> ·
+      <a href="resources.html">学习资源</a> · <a href="practice.html">真题模考</a> ·
+      <a href="tools.html">打印工具</a> ·
       <a href="faq.html">FAQ</a> · <a href="sources.html">来源</a>
     </p>
     <p class="small muted">给孩子最好的规划，是让他十年后依然爱学习、能专注、睡得香。💤</p>
@@ -160,7 +165,10 @@ def build():
             parts.append(rewrite_links(calc))
         parts.append(render_sections(p['sids']))
         parts.append(FOOTER)
-        parts.append('<script src="assets/app.js"></script>\n</body>\n</html>\n')
+        parts.append('<script src="assets/app.js"></script>')
+        for extra in p.get('scripts', []):
+            parts.append('<script src="%s"></script>' % extra)
+        parts.append('</body>\n</html>\n')
         out = os.path.join(ROOT, p['file'])
         with open(out, 'w', encoding='utf-8') as f:
             f.write('\n'.join(parts))
