@@ -1,0 +1,19 @@
+{
+  "description": "沪上三公十年规划 · 微信小程序版（tabBar 为纯文字，无需图标文件）",
+  "appid": "touristappid",
+  "projectname": "sangong-plan-miniprogram",
+  "compileType": "miniprogram",
+  "libVersion": "3.5.0",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "ignoreDevUnusedFiles": false,
+    "coverView": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true
+  },
+  "condition": {}
+}

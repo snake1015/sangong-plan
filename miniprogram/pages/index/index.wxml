@@ -1,0 +1,57 @@
+<view class="hero">
+  <view class="kicker">上海 · 三公小升初长线规划</view>
+  <view class="hero-title">{{home.title}}</view>
+  <view class="hero-sub">{{home.subtitle}}</view>
+</view>
+
+<view class="page">
+
+  <view class="stat-row">
+    <view class="stat" wx:for="{{home.quickStats}}" wx:key="label">
+      <view class="stat-num">{{item.num}}</view>
+      <view class="stat-label">{{item.label}}</view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">🚀 第一次来？按这三步走</view>
+    <view class="steps">
+      <view class="step" wx:for="{{home.steps}}" wx:key="title"
+            data-path="{{item.path}}" bindtap="goStep">
+        <view class="step-title">{{item.title}}</view>
+        <view class="step-desc">{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">📌 先记住这四句话</view>
+    <view class="card">
+      <view class="todo" wx:for="{{home.keyPoints}}" wx:key="*this">
+        <view class="todo-box on">✓</view>
+        <view class="todo-text">{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">🏫 三所学校</view>
+    <view class="card card-row" bindtap="goSchools">
+      <view>
+        <view class="card-title">上实 / 上外附中 / 浦外</view>
+        <view class="muted small">学制、2026 招生意、报名条件与流程</view>
+      </view>
+      <view class="tag">去看看 →</view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="card card-soft">
+      <view class="card-title">🔗 完整版网站</view>
+      <view class="muted small">{{site.name}}（含可打印工具包与全部章节）</view>
+      <view class="btn btn-sm btn-line" style="margin-top:16rpx" bindtap="copySite">复制网站链接</view>
+    </view>
+  </view>
+
+  <view class="footer-note">内容为公开资料整理 + 原创题库，仅供家长参考；政策以当年官方简章为准。</view>
+</view>

@@ -1,0 +1,128 @@
+<view class="page">
+
+  <!-- ============ 设置区 ============ -->
+  <block wx:if="{{phase === 'setup'}}">
+    <view class="track-row">
+      <view class="track {{trackKey === item ? 'active' : ''}}"
+            wx:for="{{trackKeys}}" wx:key="*this"
+            data-key="{{item}}" bindtap="switchTrack">{{trackLabels[index]}}</view>
+    </view>
+
+    <view class="card card-info">
+      <view class="card-title">🧠 站内原创题库</view>
+      <view class="small muted">非官方真题，用于题感与限时训练。{{young ? '低龄建议家长读题，孩子口头作答后由家长点选；' : ''}}错题本与成绩仅保存在本机。</view>
+    </view>
+
+    <view class="card">
+      <view class="kv">
+        <view class="kv-k">模式</view>
+        <view class="kv-v">
+          <picker mode="selector" range="{{modeOptions}}" value="{{modeIndex}}" bindchange="onModeChange">
+            <view>{{modeOptions[modeIndex]}} ▾</view>
+          </picker>
+        </view>
+      </view>
+      <view class="kv">
+        <view class="kv-k">科目</view>
+        <view class="kv-v">
+          <picker mode="selector" range="{{subOptions}}" value="{{subIndex}}" bindchange="onSubChange">
+            <view>{{subOptions[subIndex]}} ▾</view>
+          </picker>
+        </view>
+      </view>
+      <view class="kv">
+        <view class="kv-k">难度</view>
+        <view class="kv-v">
+          <picker mode="selector" range="{{lvOptions}}" value="{{lvIndex}}" bindchange="onLvChange">
+            <view>{{lvOptions[lvIndex]}} ▾</view>
+          </picker>
+        </view>
+      </view>
+      <view class="small muted" style="margin-top:12rpx">提示：选择「模拟卷」或「亲子小测」时，科目与难度筛选不生效。</view>
+    </view>
+
+    <view class="btn btn-primary" bindtap="start">开始练习</view>
+    <view class="btn btn-line" bindtap="openWrong">错题本（{{wrongCount}}）</view>
+
+    <view class="section" wx:if="{{history.length}}">
+      <view class="section-title">📈 最近成绩</view>
+      <view class="card">
+        <view class="history-row" wx:for="{{history}}" wx:key="date">
+          <view>{{item.date}}</view>
+          <view>{{item.mode}}</view>
+          <view>{{item.score}}/{{item.total}}（{{item.acc}}%）</view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- ============ 答题区 ============ -->
+  <block wx:if="{{phase === 'quiz'}}">
+    <view class="card">
+      <view class="q-meta">
+        <view>第 {{idx + 1}} / {{total}} 题</view>
+        <view>{{timerText}}</view>
+      </view>
+      <view class="progress-bar"><view class="progress-bar-inner" style="width:{{progress}}%"></view></view>
+      <view style="margin:8rpx 0 4rpx">
+        <text class="tag">{{q.sub}}</text>
+        <text class="tag" style="margin-left:10rpx">{{q.lv === 2 ? (young ? '4–6 岁' : '进阶') : (young ? '2.5–4 岁' : '基础')}}</text>
+      </view>
+
+      <view class="q-stem">{{q.stem}}</view>
+
+      <block wx:if="{{q.type === 'choice'}}">
+        <view class="q-opt {{item.cls}}" wx:for="{{opts}}" wx:key="i"
+              data-i="{{item.i}}" bindtap="selectOption">
+          <view class="q-key">{{item.key}}</view>
+          <view>{{item.text}}</view>
+        </view>
+      </block>
+      <block wx:else>
+        <input class="q-opt" placeholder="在此输入答案" value="{{fillValue}}" bindinput="onFill" disabled="{{checked}}" />
+      </block>
+
+      <view wx:if="{{feedback}}" class="q-feedback {{feedback.ok ? 'ok' : 'bad'}}">
+        <view><text style="font-weight:800">{{feedback.title}}</text>　正确答案：<text style="font-weight:800">{{feedback.answer}}</text></view>
+        <view style="margin-top:8rpx">{{feedback.exp}}</view>
+      </view>
+
+      <view class="btn-line" bindtap="prev" wx:if="{{idx > 0}}">← 上一题</view>
+      <view class="btn btn-primary" bindtap="check" wx:if="{{!checked}}">{{isMock ? '确认本题' : (young ? '看看对不对' : '提交本题')}}</view>
+      <view class="btn-line" bindtap="next" wx:if="{{idx < total - 1}}">下一题 →</view>
+      <view class="btn btn-sun" bindtap="submit">{{young ? '🏁 结束，看星星' : '📮 交卷判分'}}</view>
+
+      <view class="sheet">
+        <view class="sheet-btn {{item.cls}}" wx:for="{{sheet}}" wx:key="n"
+              data-i="{{index}}" bindtap="jump">{{item.n}}</view>
+      </view>
+    </view>
+  </block>
+
+  <!-- ============ 结果区 ============ -->
+  <block wx:if="{{phase === 'result'}}">
+    <view class="card">
+      <view wx:if="{{young}}" class="stars">{{starsOn}}<text class="stars-off">{{starsOff}}</text></view>
+      <view class="card-title" style="margin-top:12rpx">
+        得分 {{score}} / {{reviews.length}}　正确率 {{acc}}%　用时 {{usedText}}
+      </view>
+      <view class="muted" style="margin:10rpx 0 18rpx">
+        {{acc >= 80 ? '🎉 太棒了！可以挑战更高难度。' : (acc >= 50 ? '👍 很不错，把答错的题再讲一遍就更棒了。' : '🌱 慢慢来，愿意想、愿意说比分数重要。')}}
+      </view>
+      <view class="btn btn-primary" bindtap="again">再做一次</view>
+      <view class="btn btn-line" bindtap="backSetup">返回设置</view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">逐题回顾</view>
+      <view class="card">
+        <view class="review" wx:for="{{reviews}}" wx:key="n">
+          <view><text style="font-weight:800">{{item.n}}. {{item.ok ? '✅' : '❌'}}</text> {{item.stem}}</view>
+          <view class="small muted">你的答案：{{item.yours}} ｜ 正确答案：<text style="font-weight:800">{{item.answer}}</text></view>
+          <view class="small muted">解析：{{item.exp}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>

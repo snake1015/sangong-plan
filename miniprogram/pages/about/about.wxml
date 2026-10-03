@@ -1,0 +1,38 @@
+<view class="page">
+
+  <view class="card">
+    <view class="card-title">ℹ️ 关于本小程序</view>
+    <view>{{about.intro}}</view>
+    <view class="small muted" style="margin-top:10rpx">版本 {{site.name}} · 更新于 2026-10</view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">⚠️ 免责声明</view>
+    <view class="card card-warn">
+      <view class="disclaimer" wx:for="{{about.disclaimers}}" wx:key="*this">· {{item}}</view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">🔄 与网站的同步方式</view>
+    <view class="card">
+      <view class="todo" wx:for="{{about.sync}}" wx:key="*this">
+        <view class="todo-box on">✓</view>
+        <view class="todo-text">{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">🧰 数据与隐私</view>
+    <view class="card">
+      <view class="todo"><view class="todo-box on">✓</view><view class="todo-text">不收集任何个人信息，无网络请求</view></view>
+      <view class="todo"><view class="todo-box on">✓</view><view class="todo-text">错题本 / 成绩 / 勾选记录只保存在手机本地</view></view>
+      <view class="btn btn-line" style="margin-top:16rpx" bindtap="clearData">清空本地数据</view>
+    </view>
+  </view>
+
+  <view class="btn btn-line" bindtap="copySite">复制 GitHub 仓库链接</view>
+
+  <view class="footer-note">沪上三公 · 十年上岸规划（2 岁半起步版）</view>
+</view>

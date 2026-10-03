@@ -1,0 +1,31 @@
+<view class="page">
+
+  <view class="tabs">
+    <view class="tab {{current === index ? 'active' : ''}}"
+          wx:for="{{schools}}" wx:key="key"
+          data-index="{{index}}" bindtap="switchTab">{{item.name}}</view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">{{school.name}}</view>
+    <view class="small muted">{{school.subtitle}}</view>
+
+    <view class="kv" wx:for="{{school.rows}}" wx:key="*this">
+      <view class="kv-k">{{item[0]}}</view>
+      <view class="kv-v">{{item[1]}}</view>
+    </view>
+  </view>
+
+  <view class="card card-soft">
+    <view class="card-title">👦 适合谁</view>
+    <view>{{school.fit}}</view>
+  </view>
+
+  <view class="card card-warn">
+    <view class="card-title">⚠️ 注意</view>
+    <view>{{school.caution}}</view>
+  </view>
+
+  <view class="btn btn-line" bindtap="copyUrl">复制官网链接（在浏览器打开）</view>
+  <view class="footer-note">数据来源：2025 / 2026 年三校官方招生简章；每年 4 月更新，请以当年官网为准。</view>
+</view>

@@ -9,5 +9,10 @@ Thumbs.db
 *.swp
 *~
 
+# 微信小程序：开发者工具生成的私有配置与依赖
+miniprogram/project.private.config.json
+miniprogram/node_modules/
+miniprogram/miniprogram_npm/
+
 # Cloudflare（如需忽略某些目录不上传，见 DEPLOY.md）
 # .cfignore

@@ -51,6 +51,15 @@ python3 -m http.server 8765 --bind 127.0.0.1
 # 打开 http://127.0.0.1:8765/ （或直接双击 index.html）
 ```
 
+## 微信小程序版（`miniprogram/`）
+
+与网站同源的原生微信小程序（无第三方依赖）：首页 / 十年路线图（勾选自动保存）/ 三校档案 / 真题模考（双赛道）/ 学习资源 / 更多与免责。
+
+- 导入：微信开发者工具 → 导入项目 → 选择 `miniprogram/` 目录，AppID 可用「测试号」或 `touristappid`；
+- 题库同步：改 `assets/quiz.js` 后运行 `node _src/gen_wechat_bank.js`，自动生成 `miniprogram/data/bank.js`；
+- 文字内容：改 `miniprogram/data/content.js`（路线图 / 三校 / 资源 / 免责）；
+- 详细说明与发布流程见 `miniprogram/README.md`。
+
 ## 内容特点
 
 - **界面风格（第三版）**：暖色浅底 + 大圆角 + 大字号，导航为胶囊标签条（手机端可横向滑动，不再依赖汉堡菜单）；表格自动加横向滚动容器、右下角浮动“回到顶部”、内容轻量渐入（尊重系统“减少动效”设置）；

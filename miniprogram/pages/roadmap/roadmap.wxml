@@ -1,0 +1,31 @@
+<view class="page">
+
+  <view class="card card-info">
+    <view class="card-title">🗓️ 十年路线图（2026 → 2035）</view>
+    <view class="small muted">每个年龄段只做该做的事。勾选会自动保存，共 {{doneCount}} / {{totalCount}} 项已完成。</view>
+    <view class="progress-bar"><view class="progress-bar-inner" style="width:{{totalCount ? (doneCount * 100 / totalCount) : 0}}%"></view></view>
+    <view class="btn btn-sm btn-line" bindtap="reset">清空勾选</view>
+  </view>
+
+  <view class="card" wx:for="{{stages}}" wx:key="id">
+    <view class="stage-head">
+      <view class="stage-dot {{item.cls}}">{{index}}</view>
+      <view>
+        <view class="stage-title">{{item.title}}</view>
+        <view class="stage-period">{{item.tag}} · {{item.period}}</view>
+      </view>
+    </view>
+
+    <view class="goal">🎯 {{item.goal}}</view>
+
+    <view class="todo" wx:for="{{item.todos}}" wx:for-item="t" wx:key="key"
+          data-key="{{t.key}}" bindtap="toggle">
+      <view class="todo-box {{t.on ? 'on' : ''}}">{{t.on ? '✓' : ''}}</view>
+      <view class="todo-text {{t.on ? 'done' : ''}}">{{t.text}}</view>
+    </view>
+
+    <view class="note" wx:if="{{item.note}}">💡 {{item.note}}</view>
+  </view>
+
+  <view class="footer-note">完整版（含可打印清单、真题模考、来源链接）请见网站。</view>
+</view>

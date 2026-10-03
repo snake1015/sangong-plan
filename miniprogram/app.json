@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/roadmap/roadmap",
+    "pages/practice/practice",
+    "pages/resources/resources",
+    "pages/about/about",
+    "pages/schools/schools"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#EAF3FF",
+    "navigationBarTitleText": "沪上三公规划",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FBF8F3"
+  },
+  "tabBar": {
+    "color": "#7A8797",
+    "selectedColor": "#2F6FE4",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/roadmap/roadmap", "text": "路线" },
+      { "pagePath": "pages/practice/practice", "text": "练习" },
+      { "pagePath": "pages/resources/resources", "text": "资源" },
+      { "pagePath": "pages/about/about", "text": "更多" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
