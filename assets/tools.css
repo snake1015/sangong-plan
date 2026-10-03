@@ -39,20 +39,19 @@ code{background:#eef2ff;border:1px solid #dbe3ff;border-radius:6px;padding:1px 6
 }
 
 /* ---------- 多页版：顶栏“标签页”与页面标题条 ---------- */
-.nav-links a.active{background:var(--accent);color:#fff}
-.nav-links a.active:hover{background:var(--accent-2);color:#fff}
+.nav-links a.active{color:#fff}
 
 .band{
-  background:linear-gradient(120deg,#1e3a8a 0%,#1d4ed8 60%,#2563eb 100%);
-  color:#fff;padding:34px 20px 28px;
+  background:linear-gradient(135deg,#EAF3FF 0%,#F6F0FF 55%,#E9FBF3 100%);
+  color:var(--ink);padding:30px 20px 26px;border-bottom:1px solid var(--line);
 }
-.band .band-kicker{font-size:.85rem;opacity:.9;margin-bottom:8px}
-.band .band-kicker a{color:#bfdbfe;font-weight:600}
-.band h1{font-size:clamp(1.35rem,3.2vw,2rem);margin-bottom:8px}
-.band-desc{max-width:860px;opacity:.92;font-size:.98rem;margin:0}
+.band .band-kicker{font-size:.86rem;color:var(--ink-2);margin-bottom:8px}
+.band .band-kicker a{color:var(--accent-2);font-weight:700}
+.band h1{font-size:clamp(1.35rem,3.2vw,1.95rem);margin-bottom:8px}
+.band-desc{max-width:880px;color:var(--ink-2);font-size:1rem;margin:0}
 
 @media (max-width:900px){
-  .nav-links a{padding:6px 8px;font-size:.85rem}
+  .nav-links a{padding:8px 13px;font-size:.9rem}
 }
 
 @media print{
@@ -106,32 +105,36 @@ code{background:#eef2ff;border:1px solid #dbe3ff;border-radius:6px;padding:1px 6
 }
 
 /* ---------- 双赛道（幼升小 / 小升初） ---------- */
-.qz-tracks{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-.qz-track{flex:1 1 220px;background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 18px;font-size:1rem;font-weight:700;font-family:inherit;color:var(--ink-2);cursor:pointer;text-align:center}
-.qz-track:hover{border-color:var(--accent);color:var(--accent-2)}
-.qz-track.active{background:linear-gradient(120deg,#1e3a8a,#2563eb);border-color:#1d4ed8;color:#fff;box-shadow:0 8px 20px -12px rgba(37,99,235,.8)}
+.qz-tracks{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.qz-track{flex:1 1 240px;background:#fff;border:2px solid var(--line);border-radius:20px;padding:18px 20px;font-size:1.08rem;font-weight:800;font-family:inherit;color:var(--ink-2);cursor:pointer;text-align:center;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+.qz-track:hover{border-color:var(--accent);color:var(--accent-2);transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.qz-track.active{background:linear-gradient(120deg,var(--accent),#7FB0FF);border-color:transparent;color:#fff;box-shadow:0 14px 26px -16px rgba(76,141,255,.95)}
+.qz-track:nth-child(1){background-image:linear-gradient(135deg,#FFF6E8,#FFFBf2)}
+.qz-track:nth-child(2){background-image:linear-gradient(135deg,#EFF6FF,#F8FBFF)}
+.qz-track.active{background-image:linear-gradient(120deg,var(--accent),#7FB0FF)}
 
 /* 低龄适配：更大的字、更大的按钮、更宽松的行距 */
-.qz-young .qz-q{font-size:1.3rem;line-height:1.9}
-.qz-young .qz-opt{font-size:1.12rem;padding:16px 18px;margin:10px 0;border-radius:14px;min-height:56px;display:flex;align-items:center;gap:12px}
-.qz-young .qz-progress{height:12px}
-.qz-young .qz-btn{font-size:1rem;padding:12px 20px;border-radius:12px}
-.qz-young .qz-feedback{font-size:1.02rem}
-.qz-key{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#e5e7eb;color:#374151;font-weight:700;font-size:.85rem;flex:none}
-.qz-young .qz-key{width:30px;height:30px;font-size:.95rem;background:#dbeafe;color:#1d4ed8}
+.qz-young .qz-q{font-size:1.35rem;line-height:1.95}
+.qz-young .qz-opt{font-size:1.15rem;padding:18px 20px;margin:12px 0;border-radius:18px;min-height:62px;display:flex;align-items:center;gap:14px}
+.qz-young .qz-opt{background:#FBFCFF}
+.qz-young .qz-progress{height:14px;background:#E8EEF9}
+.qz-young .qz-btn{font-size:1.02rem;padding:14px 22px;border-radius:999px;min-height:46px}
+.qz-young .qz-feedback{font-size:1.05rem;border-radius:16px}
+.qz-key{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#EEF2F8;color:#4A5866;font-weight:800;font-size:.9rem;flex:none}
+.qz-young .qz-key{width:34px;height:34px;font-size:1.05rem;background:#E4EEFF;color:#2F6FE4}
 .qz-timer-wrap{display:flex;gap:8px;align-items:center}
-.qz-mini{padding:5px 12px;font-size:.82rem;border-radius:999px}
+.qz-mini{padding:7px 14px;font-size:.86rem;border-radius:999px}
 
 /* 亲子口语卡 */
-.qz-oral{margin-bottom:10px}
-.qz-card{background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;padding:6px 14px}
-.qz-card summary{cursor:pointer;font-weight:700;color:#075985;padding:8px 0}
-.qz-card ul{margin:6px 0 12px 22px;display:grid;gap:6px;font-size:.92rem;color:#0c4a6e}
+.qz-oral{margin-bottom:12px}
+.qz-card{background:#F4FCF8;border:1.5px solid #B9ECDD;border-radius:18px;padding:6px 16px}
+.qz-card summary{cursor:pointer;font-weight:800;color:#178A70;padding:10px 0}
+.qz-card ul{margin:6px 0 14px 22px;display:grid;gap:8px;font-size:.95rem;color:#1F5C50}
 
 /* 星级评价（幼升小） */
-.qz-stars{font-size:1.9rem;letter-spacing:4px;line-height:1.3}
-.qz-stars-off{color:#cbd5e1}
-.qz-young .qz-score{font-size:1.5rem}
+.qz-stars{font-size:2.1rem;letter-spacing:6px;line-height:1.3}
+.qz-stars-off{color:#D8DFEA}
+.qz-young .qz-score{font-size:1.6rem}
 
 /* 打印：亲子卡与读题按钮不出现在卷面 */
 @media print{
